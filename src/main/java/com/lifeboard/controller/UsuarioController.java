@@ -63,6 +63,7 @@ public class UsuarioController {
 
         var uri = uriBuilder.path("/api/usuarios/{id}").buildAndExpand(usuario.getId()).toUri();
 
+        System.out.println("Usuário criado com sucesso!");
         return ResponseEntity.created(uri).body(usuario);
     }
 
